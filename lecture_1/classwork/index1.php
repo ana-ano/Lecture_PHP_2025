@@ -1,3 +1,9 @@
+<?php
+    include "questions.php";
+    // echo "<pre>";
+    // print_r($questions);
+    // echo "</pre>";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,25 +13,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <table class="table-1">
-        <tr>
-            <th>Questions</th>
-            <th>Answers</th>
-            <th>Max Point</th>
-        </tr>
-        <?php 
-        include 'questions.php'; 
-
-        foreach ($question as $q) { ?>
+    <form action="Lecturer.php" method="post">
+        <table class="table-1">
             <tr>
-                <td><?php echo $q['question']; ?></td>
-                <td><input type="text" name="answer"></td>
-                <td><?php echo $q['maxpoint']; ?></td>
+                <th>Questions</th>
+                <th>Answers</th>
+                <th>MaxPoint</th>
             </tr>
-        <?php } ?>
-    </table>
+            <?php
+                for($i=0; $i<count($questions); $i++){
+            ?>
+            <tr>
+                <td><?=$questions[$i]['question']?></td>
+                <td><input type="text" name="answers[]"></td>
+                <td><?=$questions[$i]['maxpoint']?></td>
+            </tr>
+            <?php
+                }
+            ?>
+            <tr>
+                <td colspan="3">
+                    Student: 
+                    <input type="text" placeholder="student_n">
+                    <input type="text" placeholder="student_l">
+                    <button>Send</button>
+                </td>
+            </tr>
+        </table>
+    </form>
 </body>
 </html>
+
 
 
 
