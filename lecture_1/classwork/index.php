@@ -1,8 +1,7 @@
 <?php
-    include "questions.php";
-    // echo "<pre>";
-    // print_r($questions);
-    // echo "</pre>";
+    include "questions.php"; 
+
+    shuffle($questions); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,20 +12,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="Lecturer.php" method="post">
+    <form action="lecturer.php" method="post">
         <table class="table-1">
             <tr>
                 <th>Questions</th>
                 <th>Answers</th>
-                <th>MaxPoint</th>
+                <th>Max Point</th>
             </tr>
             <?php
-                for($i=0; $i<count($questions); $i++){
+                for ($i = 0; $i < count($questions); $i++) {
             ?>
             <tr>
-                <td><?=$questions[$i]['question']?></td>
+                <td><?=$questions[$i]['question']?>
+                    <input type="hidden" name="questions[]" value="<?=$questions[$i]['question']?>">
+                </td>
                 <td><input type="text" name="answers[]"></td>
-                <td><?=$questions[$i]['maxpoint']?></td>
+                <td><?=$questions[$i]['maxpoint']?>
+                    <input type="hidden" name="maxpoints[]" value="<?=$questions[$i]['maxpoint']?>">
+                </td>
             </tr>
             <?php
                 }
@@ -34,8 +37,8 @@
             <tr>
                 <td colspan="3">
                     Student: 
-                    <input type="text" placeholder="student_n">
-                    <input type="text" placeholder="student_l">
+                    <input type="text" placeholder="Name" name="student_n">
+                    <input type="text" placeholder="Lastname" name="student_l">
                     <button>Send</button>
                 </td>
             </tr>
@@ -43,7 +46,3 @@
     </form>
 </body>
 </html>
-
-
-
-
