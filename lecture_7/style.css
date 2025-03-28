@@ -1,0 +1,13 @@
+.container {
+    border: solid 2px gray;
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+}
+
+.info {
+    margin-top: 10px;
+    background-color: blanchedalmond;
+    min-height: 120px;
+    padding: 10px;
+}
