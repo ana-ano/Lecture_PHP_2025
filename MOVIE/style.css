@@ -1,0 +1,120 @@
+/* საერთო სტილი */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* ნავბარის სტილი */
+nav {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff9900;
+}
+
+nav div span {
+    font-weight: 600;
+}
+
+/* ფილმების ბლოკი */
+.movie-card {
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    width: 220px;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease;
+    position: relative;
+}
+
+.movie-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.movie-card h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.movie-card p {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+/* ღილაკების სტილი */
+button {
+    background-color: #ff9900;
+    border: none;
+    color: white;
+    padding: 7px 14px;
+    margin-right: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #cc7a00;
+}
+
+/* ფილმების კონტეინერი */
+.movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* ძებნის ფორმა */
+form {
+    padding: 20px;
+}
+
+input[type="text"] {
+    padding: 7px 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* ლოგაუთის ბმულის სტილი */
+nav a.logout {
+    margin-left: 15px;
+    color: #fff;
+    font-weight: 600;
+}
+
+nav a.logout:hover {
+    color: #ff3300;
+}

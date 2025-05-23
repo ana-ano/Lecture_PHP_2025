@@ -1,0 +1,141 @@
+/* style.css */
+
+body.dark-theme {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a1a1a;
+    padding: 20px 40px;
+}
+
+.main-header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f39c12;
+}
+
+.main-header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 16px;
+}
+
+.main-header nav a:hover {
+    color: #fff;
+}
+
+.main-header .user-info {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 40px;
+    background-image: url('profile.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; /* ან contain */
+    /* თუ fixed არ გინდა: */
+    background-attachment: scroll; 
+}
+
+
+.hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 16px;
+    color: #aaa;
+    margin-bottom: 20px;
+    max-width: 400px;
+}
+
+.btn-watch {
+    padding: 10px 20px;
+    background: #f39c12;
+    color: #000;
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hero-image img {
+    max-height: 320px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.popular {
+    padding: 40px;
+}
+
+.popular h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.movie-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.movie-card .movie-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* ან flex-start თუ მარცხნივ გინდა */
+    margin-top: 5px;
+}
+
+.movie-card .movie-actions a {
+    font-size: 12px;          /* პატარა ზომა */
+    padding: 5px 8px;         /* კარგი ზომის დაწკაპუნება */
+    background-color: #f39c12;
+    color: #000;
+    border-radius: 4px;
+    text-decoration: none;
+    white-space: nowrap;      /* არ გადახაზოს სიტყვები ახალ ხაზზე */
+    transition: background-color 0.3s ease;
+}
+
+.movie-card .movie-actions a:hover {
+    background-color: #e67e22;
+}
+
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.movie-card h3 {
+    font-size: 16px;
+    margin: 0 0 10px;
+    color: #fff;
+}
+
+.movie-card a {
+    text-decoration: none;
+    color: #f39c12;
+    font-size: 14px;
+}
