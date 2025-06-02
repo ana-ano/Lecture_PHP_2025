@@ -11,7 +11,7 @@ include "login.php";
     <link rel="stylesheet" href="front/style.css">
 </head>
 <body>
-    <header>Header
+    <header>lecture11 
         <a href="cms/index.php">Admin</a>
         <form action="" method="post">
             <input type="text" name="user">
